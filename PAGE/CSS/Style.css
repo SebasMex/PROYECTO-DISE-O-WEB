@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+body {
+   /* font-family: monospace; */
+   font-family: "Anton", sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(55, 58, 64);
+   color: white;
+   text-shadow: 
+   -1px -1px 0 black,
+    1px -1px 0 black,
+   -1px  1px 0 black,
+    1px  1px 0 black;
+}
+
+
+nav {
+    background-color: rgb(220, 95, 0);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img.logo {
+    height: 90px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    margin-right: 20px; 
+    margin-bottom: 0;   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+h3{
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+nav ul li a:hover {
+    background-color: rgb(104, 109, 118);
+}
+
+
+header {
+    background-color: rgb(104, 109, 118);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+
+main {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.logo {
+    mix-blend-mode: multiply;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+    animation: slide-animation 16s infinite;
+}
+
+.carousel-item {
+    width: 25%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    45% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    70% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.controls label {
+    cursor: pointer;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked ~ .carousel-inner {
+    animation: none;
+}
+
+input[type="radio"]#slide1:checked ~ .carousel-inner {
+    transform: translateX(0);
+}
+
+input[type="radio"]#slide2:checked ~ .carousel-inner {
+    transform: translateX(-25%);
+}
+
+input[type="radio"]#slide3:checked ~ .carousel-inner {
+    transform: translateX(-50%);
+}
+
+input[type="radio"]#slide4:checked ~ .carousel-inner {
+    transform: translateX(-75%);
+}
+
+@media (max-width: 600px) {
+    /* Puedes agregar estilos responsivos aquí si es necesario */
+}
+
+/* Estilos adicionales */
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.container img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.container div {
+    max-width: 600px;
+}
