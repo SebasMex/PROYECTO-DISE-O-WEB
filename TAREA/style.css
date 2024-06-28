@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card-title {
+    color: #007bff;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
